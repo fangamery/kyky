@@ -2,98 +2,35 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ты красотка</title>
   <style>
-    :root{
-      --bg: #111;
-      --text: #fff;
-      --accent: #ff5c8a;
-      font-size: 16px;
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    html,body{height:100%;margin:0}
-    body{
-      background: linear-gradient(180deg,#0b0b0b 0%, #151515 100%);
-      color:var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:4vh 4vw 12vh 4vw; /* give space for caption */
-      box-sizing:border-box;
+    img {
+      max-width: 90%;
+      max-height: 70%;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
-
-    .wrap{
-      width:100%;
-      max-width:520px; /* ограничение для больших экранов */
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:2.5vh;
-    }
-
-    .photo{
-      width:100%;
-      height:60vh;
-      max-height:720px;
-      background:#222;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    /* подпись снизу — фиксированная относительно окна, но не перекрывает контент */
-    .caption{
-      position:fixed;
-      left:0;
-      right:0;
-      bottom:4vh;
-      display:flex;
-      justify-content:center;
-      pointer-events:none; /* нельзя нажать по ней случайно */
-    }
-
-    .caption .bubble{
-      background: linear-gradient(90deg, rgba(255,92,138,0.14), rgba(255,92,138,0.07));
-      padding:12px 18px;
-      border-radius:999px;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      color:var(--text);
-      font-size:calc(18px + 1vw);
-      font-weight:600;
-      border:1px solid rgba(255,255,255,0.04);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-      pointer-events:auto; /* если надо будет клик — можно включить */
-    }
-
-    @media (max-width:420px){
-      .photo{height:55vh;border-radius:14px}
-      .caption .bubble{font-size:18px;padding:10px 14px}
+    p {
+      margin-top: 20px;
+      font-size: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="photo">
-      <img src="https://i.pinimg.com/736x/a2/98/c6/a298c67aa0c0d85c4346f43e3aa99dd2.jpg" alt="Фото" crossorigin="anonymous" />
-    </div>
-  </div>
-
-  <div class="caption">
-    <div class="bubble">Ты красотка <span aria-hidden="true">😘</span></div>
-  </div>
+  <img src="https://i.pinimg.com/736x/a2/98/c6/a298c67aa0c0d85c4346f43e3aa99dd2.jpg" alt="Фото" />
+  <p>Ты красотка 😘</p>
 </body>
 </html>
